@@ -1,1 +1,7 @@
-print("Hello world");
+firstRow = ["-", "-", "-"];
+secondRow = ["-", "-", "-"];
+thirdRow = ["-", "-", "-"];
+
+print(firstRow);
+print(secondRow);
+print(thirdRow);
