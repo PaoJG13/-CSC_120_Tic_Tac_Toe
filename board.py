@@ -5,6 +5,7 @@ board = [
             ]
 
 user = True
+moveCounter = 0
 
 def printBoard(board):
     print("Printing board...")
@@ -45,7 +46,8 @@ def currentPlayer(user): # Return different symbols to print on board
 def checkRow(user, board):
     for i in range (len(board)):
         if (board[0][i]==board[1][i] and board[1][i]==board[2][i]):
-            return True
+            if (board[0][i]!="-"):
+                return True
         else:
             return False
             
@@ -53,17 +55,20 @@ def checkRow(user, board):
 def checkCol(user, board):
     for i in range (len(board)):
         if (board[i][0]==board[i][1] and board[i][1]==board[1][2]):
-            return True
+            if (board[i][0]!="-"):
+                return True
         else:
             return False
 
 def checkDiag(user, board):
         if (board[0][0]==board[1][1] and board[1][1]==board[2][2]):
-            return True
+            if (board[0][0]!="-"):
+                return True
         else:
             return False
         if (board[2][0]==board[1][1] and board[1][1]==board[0][2]):
-            return True
+            if (board[2][0]!="-"):
+                return True
         else:
             return False
             
@@ -75,8 +80,10 @@ def win(user, board):
         return True
     elif checkDiag(user,board):
         return True
+    elif (moveCounter == 9):
+        return True
+        print("It's a draw")
     else:
-        print("It's a draw'")
         return False
 
 def printWin(currentPlayer): # Prompt player to input
@@ -114,6 +121,7 @@ while True:
     markBoard(userInput1, userInput2, board, currentPlayer)
     if win(activePlayer, board):
         printWin(currentPlayer)
-        False
+
+    moveCounter += 1
     user = not user
     
