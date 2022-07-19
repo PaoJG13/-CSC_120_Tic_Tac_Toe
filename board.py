@@ -15,4 +15,4 @@ def player1():
   column = input("Enter column number (0-2): ")
   print("Player 1 added a mark at location " + row + ", " + column)
 
-  player1()
+player1()
