@@ -11,4 +11,4 @@ class tictactoe:
         print(board[2])
 
 
-printBoard()
+tictactoe.printBoard()
