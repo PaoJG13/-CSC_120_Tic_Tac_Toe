@@ -1,8 +1,8 @@
 class tictactoe:
     def printBoard():
         board = [
-            ["-","-","-"]
-            ["-", "-", "-"]
+            ["-","-","-"],
+            ["-", "-", "-"],
             ["-", "-", "-"]
             ]
         print("Printing board...")
