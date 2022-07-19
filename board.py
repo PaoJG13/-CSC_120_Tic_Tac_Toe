@@ -108,12 +108,12 @@ while True:
        
     checkBoard(userInput1, userInput2, board)
     if checkBoard(userInput1, userInput2, board):
-        print("**** Board [" + row + "][" + col + "] has already been selected. Please select somewhere else on the board ****")
+        print("**** Board [" + userInput1 + "][" + userInput2 + "] has already been selected. Please select somewhere else on the board ****")
         print("**** Invalid choice. Please mark again! ****")
         continue
     markBoard(userInput1, userInput2, board, currentPlayer)
     if win(activePlayer, board):
         printWin(currentPlayer)
-        break
+        False
     user = not user
     
