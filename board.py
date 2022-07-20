@@ -121,6 +121,7 @@ while True:
     markBoard(userInput1, userInput2, board, currentPlayer)
     if win(activePlayer, board):
         printWin(currentPlayer)
+        break
 
     moveCounter += 1
     user = not user
